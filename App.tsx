@@ -21,28 +21,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: 'white',
     paddingHorizontal: 24,
-    // backgroundColor: '#202124',
   },
   title: {
-    color: 'white',
+    color: 'black',
     fontSize: 30,
     marginBottom: 30,
   },
   name: {
-    color: 'white',
+    color: 'black',
     fontSize: 25,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 
