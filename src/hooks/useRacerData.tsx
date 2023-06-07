@@ -10,21 +10,16 @@ const useRacerData = (): Racer[] => {
 
   const fetchRacerData = () => {
     fetch('https://ba6gijdps7.execute-api.us-east-1.amazonaws.com/racers')
-      .then(response => response.json())
+      .then(async response => await response.json())
       .then(data => {
-        const racerData: Racer[] = data.map((racer: any) => ({
-          id: racer.id,
-          name: racer.name,
-          likelihood: null,
-        }));
-        setRacers(racerData);
+        setRacers(data.racers);
       })
       .catch(error => {
         console.log('Error fetching racer data:', error);
       });
   };
 
-  return racers;
+  return { racers, setRacers };
 };
 
 export default useRacerData;
